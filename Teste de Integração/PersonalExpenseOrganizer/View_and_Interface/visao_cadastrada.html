@@ -1,0 +1,91 @@
+resposta = f"""
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Despesa Cadastrada</title>
+  <style>
+    :root {
+      --color-primary: #006600;
+      --color-primary-hover: #004d00;
+      --color-background: #f0f2f5;
+      --color-text: #333333;
+      --border-radius: 8px;
+      --font-family: 'Inter', Arial, sans-serif;
+      --font-size-base: 16px;
+      --spacing: 16px;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      font-size: var(--font-size-base);
+      background-color: var(--color-background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: calc(var(--spacing) * 2);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      color: var(--color-primary);
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing);
+      text-align: center;
+    }
+    .card {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      padding: var(--spacing);
+      margin-bottom: var(--spacing);
+    }
+    .card p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+      color: var(--color-text);
+    }
+    .label {
+      font-weight: 600;
+      color: #555;
+    }
+    .menu-link {
+      display: inline-block;
+      text-decoration: none;
+      background-color: var(--color-primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: var(--border-radius);
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    .menu-link:hover,
+    .menu-link:focus {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      outline: none;
+    }
+    .actions {
+      text-align: center;
+      margin-top: var(--spacing);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Despesa cadastrada com sucesso!</h1>
+    <div class="card">
+      <!--DADO-->"
+    </div>
+    <div class="actions">
+      <a href="/" class="menu-link">Voltar ao Menu</a>
+    </div>
+  </div>
+</body>
+</html>
+"""

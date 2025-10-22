@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Conta Bancária</title>
+  <style>
+    :root {
+      --color-primary: #006600;
+      --color-primary-hover: #004d00;
+      --color-background: #f4f6f9;
+      --color-text: #333333;
+      --border-radius: 8px;
+      --font-family: 'Inter', Arial, sans-serif;
+      --font-size-base: 16px;
+      --spacing: 16px;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      font-size: var(--font-size-base);
+      background-color: var(--color-background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: calc(var(--spacing) * 2);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 420px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing);
+      color: var(--color-primary);
+    }
+    label {
+      display: block;
+      margin-top: var(--spacing);
+      font-weight: 600;
+      color: #555;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: var(--border-radius);
+      box-sizing: border-box;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input:focus, select:focus {
+      border-color: var(--color-primary);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 102, 0, 0.2);
+    }
+    .actions {
+      margin-top: calc(var(--spacing) * 2);
+      display: flex;
+      gap: var(--spacing);
+      flex-direction: column;
+    }
+    button, .link {
+      padding: 12px;
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    button {
+      background: var(--color-primary);
+      color: #fff;
+    }
+    button:hover, button:focus {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+      outline: none;
+    }
+    .link {
+      background: #ddd;
+      color: #333;
+    }
+    .link:hover, .link:focus {
+      background: #ccc;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Conta Bancária</h1>
+    <form method="POST" action="/cadastro_banco">
+      <label for="bank">Banco:</label>
+      <input type="text" id="bank" name="bank" required>
+
+      <label for="ag">Agência:</label>
+      <input type="text" id="ag" name="ag" required>
+
+      <label for="cc">Conta:</label>
+      <input type="text" id="cc" name="cc" required>
+
+      <label for="tipo">Tipo da Conta:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="" disabled selected>Selecione</option>
+        <option value="Corrente">Corrente</option>
+        <option value="Poupança">Poupança</option>
+        <option value="Salário">Salário</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <div class="actions">
+        <button type="submit">Cadastrar</button>
+        <a href="/menu" class="link">Voltar ao Menu</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

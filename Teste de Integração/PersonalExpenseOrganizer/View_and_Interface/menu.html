@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Principal</title>
+  <style>
+    :root {
+      --color-primary: #006600;
+      --color-primary-hover: #004d00;
+      --color-background: #f0f2f5;
+      --color-text: #333333;
+      --border-radius: 8px;
+      --font-family: 'Inter', sans-serif;
+      --font-size-base: 16px;
+      --spacing: 16px;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      font-size: var(--font-size-base);
+      background-color: var(--color-background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: calc(var(--spacing) * 2);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+    }
+    .container h1 {
+      color: var(--color-text);
+      margin-bottom: var(--spacing);
+      font-size: 1.5rem;
+    }
+    .menu-grid {
+      display: grid;
+      gap: var(--spacing);
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background-color: var(--color-primary);
+      color: white;
+      padding: var(--spacing);
+      border-radius: var(--border-radius);
+      transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .menu-item:hover,
+    .menu-item:focus {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      outline: none;
+    }
+    .menu-icon {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+    .footer {
+      margin-top: var(--spacing);
+      font-size: 0.875rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Menu Principal</h1>
+    <div class="menu-grid">
+      <a href="/cadastrar_despesa" class="menu-item"><span class="menu-icon">➕</span> Nova despesa</a>
+      <a href="/cadastrar_conta" class="menu-item"><span class="menu-icon">🔑</span> Cadastros</a>
+      <a href="/listar_despesas" class="menu-item"><span class="menu-icon">📋</span> Listar despesas</a>
+      <a href="/calcular_total" class="menu-item"><span class="menu-icon">💰</span> Calcular total mensal</a>
+      <a href="/sair" class="menu-item"><span class="menu-icon">🚪</span> Sair</a>
+    </div>
+    <div class="footer">Organizador de Despesas Pessoais</div>
+  </div>
+</body>
+</html>

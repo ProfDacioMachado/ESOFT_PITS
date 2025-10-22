@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Despesa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Despesa</h1>
+    <form action="/cadastrar" method="post">
+      <label>Data da Despesa</label>
+      <input type="text" name="dat_despesa" placeholder="dd/mm/aaaa" required>
+
+      <label>Valor</label>
+      <input type="number" step="10.00" name="valor" required>
+
+      <label>Categoria</label>
+      <input type="text" name="cat_despesa" required>
+
+      <label>Descrição</label>
+      <input type="text" name="descricao" required>
+
+      <label>Tag</label>
+      <input type="text" name="tag">
+
+      <label>Forma de Pagamento</label>
+      <input type="text" name="forma_pgmt">
+
+      <label>Banco</label>
+      <select name="banco" required>
+        <!--BANCOS-->
+      </select>
+
+      <button type="submit">Salvar</button>
+    </form>
+  </div>
+</body>
+</html>
